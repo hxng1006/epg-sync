@@ -138,13 +138,14 @@ export default function ChannelsPage() {
         const [
           channel_id,
           display_name,
+          regexp = "",
           category = "",
           area = "CN",
           logo_url = "",
           timezone = "Asia/Shanghai",
         ] = line.split(",").map((s) => s.trim())
-        return { channel_id, display_name, category, area, logo_url, timezone }
-      })
+        return { channel_id, display_name, regexp, category, area, logo_url, timezone }
+      }) 
 
       await api.post("/admin/channels/batch", { channels })
       toast({
@@ -410,14 +411,14 @@ export default function ChannelsPage() {
           <DialogHeader>
             <DialogTitle>批量导入频道</DialogTitle>
             <DialogDescription>
-              每行一个频道,格式: 频道ID,显示名称,分类,地区,Logo URL,时区
+              每行一个频道,格式: 频道ID,显示名称,匹配正则,分类,地区,Logo URL,时区
             </DialogDescription>
           </DialogHeader>
           <div>
             <Textarea
               value={batchData}
               onChange={(e) => setBatchData(e.target.value)}
-              placeholder="cctv1,CCTV-1综合,央视,CN,,Asia/Shanghai&#10;cctv2,CCTV-2财经,央视,CN,,Asia/Shanghai"
+              placeholder="cctv1,CCTV-1综合,^cctv-?1(\s*综合)?,央视,CN,,Asia/Shanghai"
               rows={10}
               className="font-mono text-sm"
             />

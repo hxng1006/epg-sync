@@ -3,3 +3,4 @@ tmp
 logs
 .DS_Store
 scgd.json
+config/config.dev.yaml

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"os"
 	"os/signal"
 	"syscall"
@@ -31,7 +32,7 @@ func main() {
 
 	err := logger.Init(&configs.Logger)
 	if err != nil {
-		logger.Fatal("Failed to initialize logger", logger.Err(err))
+		log.Fatalf("Failed to initialize logger: %v", err)
 	}
 
 	application, err := app.New(configs)

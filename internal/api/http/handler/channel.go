@@ -61,6 +61,7 @@ func (h *ChannelHandler) BatchCreateChannel(c *gin.Context) {
 		newChannels = append(newChannels, &model.Channel{
 			ChannelID:   channel.ChannelID,
 			DisplayName: channel.DisplayName,
+			Regexp:      channel.Regexp,
 			Category:    channel.Category,
 			Area:        channel.Area,
 			LogoURL:     channel.LogoURL,
