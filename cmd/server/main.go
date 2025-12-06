@@ -10,6 +10,7 @@ import (
 	_ "github.com/epg-sync/epgsync/internal/provider/providers/bfgd"
 	_ "github.com/epg-sync/epgsync/internal/provider/providers/btzx"
 	_ "github.com/epg-sync/epgsync/internal/provider/providers/cctv"
+	_ "github.com/epg-sync/epgsync/internal/provider/providers/daxiang"
 	_ "github.com/epg-sync/epgsync/internal/provider/providers/fengshow"
 	_ "github.com/epg-sync/epgsync/internal/provider/providers/hainan"
 	_ "github.com/epg-sync/epgsync/internal/provider/providers/iqilu"
