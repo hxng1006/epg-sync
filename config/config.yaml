@@ -1,15 +1,15 @@
 server:
   host: 0.0.0.0
-  port: 5678
+  port: 5690
   mode: release
   timeout: 90
-  jwt_secret: ""
+  jwt_secret: "c2d4f532ab9230db9310848841c72727"
   jwt_expire_hours: 24
 
 cache:
-  type: memory
+  type: redis
   addr: redis.orb.local:6379
-  password: "1"
+  password: "1006"
   db: 1
   ttl: 24h
 
@@ -18,7 +18,7 @@ database:
   host: mysql.orb.local
   port: 3306
   user: root
-  password: 123456
+  password: 1006
   name: /config/epg_sync.db
   debug: false
 providers:
