@@ -7,8 +7,8 @@ server:
   jwt_expire_hours: 24
 
 cache:
-  type: redis
-  addr: 192.168.2.130:6379
+  type: memory
+  addr: redis.orb.local:6379
   password: ""
   db: 1
   ttl: 24h
