@@ -1,5 +1,5 @@
 server:
-  host: 127.0.0.1
+  host: 0.0.0.0
   port: 5690
   mode: release
   timeout: 90
@@ -8,8 +8,8 @@ server:
 
 cache:
   type: redis
-  addr: 127.0.0.1:6379
-  password: "1006"
+  addr: 192.168.2.130:6379
+  password: ""
   db: 1
   ttl: 24h
 
@@ -61,42 +61,10 @@ providers:
     priority: 1
     timeout: 10s
     rate_limit: 5
-    max_retries: 2
-  - name: iqilu
-    id: iqilu
-    base_url: https://sdxw.iqilu.com
-    enabled: true
-    priority: 1
-    timeout: 10s
-    rate_limit: 5
-    max_retries: 2
-  - name: sxrtv
-    id: sxrtv
-    base_url: https://apphhplushttps.sxrtv.com
-    enabled: true
-    priority: 3
-    timeout: 10s
-    rate_limit: 5
-    max_retries: 2
+    max_retries: 2 
   - name: suzhou
     id: suzhou
     base_url: https://kszapi1.kan0512.com
-    enabled: true
-    priority: 1
-    timeout: 10s
-    rate_limit: 5
-    max_retries: 2
-  - name: hainan
-    id: hainan
-    base_url: https://www.hnntv.cn
-    enabled: true
-    priority: 2
-    timeout: 10s
-    rate_limit: 5
-    max_retries: 2
-  - name: btzx
-    id: btzx
-    base_url: https://api.btzx.com.cn
     enabled: true
     priority: 1
     timeout: 10s
@@ -110,54 +78,8 @@ providers:
     timeout: 10s
     rate_limit: 5
     max_retries: 2
-  - name: shanxi
-    id: shanxi
-    base_url: http://qidian.sxtvs.com
-    enabled: true
-    priority: 1
-    timeout: 10s
-    rate_limit: 5
-    max_retries: 2
-  - name: xiamen
-    id: xiamen
-    base_url: https://mapi1.kxm.xmtv.cn
-    enabled: true
-    priority: 2
-    timeout: 10s
-    rate_limit: 5
-    max_retries: 2
-  - name: bfgd
-    id: bfgd
-    base_url: http://slave.bfgd.com.cn
-    enabled: true
-    priority: 1
-    timeout: 10s
-    rate_limit: 5
-    max_retries: 2
-  - name: jsp
-    id: jsp
-    base_url: https://app.jxgdw.com
-    enabled: true
-    priority: 2
-    timeout: 10s
-    rate_limit: 5
-    max_retries: 2
-  - name: daxiang
-    id: daxiang
-    base_url: https://pubmod.hntv.tv
-    enabled: true
-    priority: 2
-    timeout: 10s
-    rate_limit: 5
-    max_retries: 2
-  - name: hebei
-    id: hebei
-    base_url: https://api.cmc.hebtv.com
-    enabled: true
-    priority: 2
-    timeout: 10s
-    rate_limit: 5
-    max_retries: 2
+  
+   
 
 logger:
   level: info          # debug, info, warn, error
