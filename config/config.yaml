@@ -21,6 +21,7 @@ database:
   password: 1006
   name: /config/epg_sync.db
   debug: false
+  
 providers:
   - name: ysp
     id: ysp
